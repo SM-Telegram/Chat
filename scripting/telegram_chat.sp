@@ -22,7 +22,7 @@ public Action Telegram(int iClient, int iArgC) {
 	GetConVarString(FindConVar("hostname"), sHostname, sizeof(sHostname));
 	GetCmdArgString(sMessage, sizeof(sMessage));
 
-	Format(sBuffer, sizeof(sBuffer), "`Сервер: %s / Игрок %s отправил сообщение: %s`", sHostname, iClient, sMessage);
+	Format(sBuffer, sizeof(sBuffer), "`Сервер: %s / Игрок %N отправил сообщение: %s`", sHostname, iClient, sMessage);
 
 	TelegramMsg(sBuffer);
 	TelegramSend();
